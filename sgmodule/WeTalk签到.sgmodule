@@ -1,3 +1,7 @@
+#!name=WeTalk 签到模块
+#!desc=获取 WeTalk 签到参数并执行每日定时签到任务。
+#!author=ninggee
+#!category=定时任务
 [Script]
 
 WeTalk获取签到参数 = type=http-request,pattern=^https:\/\/api\.wetalkapp\.com\/app\/queryBalanceAndBonus,script-path=https://raw.githubusercontent.com/ninggee/Surge/refs/heads/main/js/WeTalk_capture.js,timeout=60
