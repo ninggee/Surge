@@ -1,0 +1,10 @@
+[Script]
+
+WeTalk获取签到参数 = type=http-request,pattern=^https:\/\/api\.wetalkapp\.com\/app\/queryBalanceAndBonus,script-path=https://raw.githubusercontent.com/ninggee/Surge/refs/heads/main/js/WeTalk_capture.js,timeout=60
+
+WeTalk签到 = type=cron,cronexp="30 8,20 * * *",script-path=https://raw.githubusercontent.com/ninggee/Surge/refs/heads/main/js/WeTalk_Task.js,timeout=300,script-update-interval=0
+
+
+[MITM]
+
+hostname = %APPEND% api.wetalkapp.com
